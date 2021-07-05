@@ -1,0 +1,31 @@
+{
+  "name": "cypress-bdd",
+  "version": "1.0.0",
+  "description": "cypress with cucumber",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "cy:run:chrome": "cypress run --browser chrome",
+    "cy:run:firefox": "cypress run --browser firefox",
+    "cyLrun:electron": "cypress run --browser electron",
+    "cy:run-dashboard": "cypress run --record --key f43659ea-86c3-4aff-b6ea-a603fa77c482",
+    "cy:run-cucum": "./node_modules/.bin/cypress-tags run -e TAGS='@ayam'"
+  },
+  "keywords": [
+    "Cypress",
+    "BDD",
+    "Cucumber"
+  ],
+  "author": "johannes",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^7.6.0",
+    "cypress-cucumber-preprocessor": "^4.1.2",
+    "cypress-xpath": "^1.6.2",
+    "mochawesome": "^6.2.2",
+    "prettier": "^2.3.2"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}

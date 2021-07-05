@@ -1,0 +1,17 @@
+{
+    "video": true,
+    "watchForFileChanges": false,
+    "defaultCommandTimeout":5000,
+    "pageLoadTimeout": 10000,
+    "ignoreTestFile": ["*.js", "*.md"],
+    "testFiles": "**/*.feature",
+    "projectId": "2xzpz9",
+    "reporter": "mochawesome",
+    "reporterOptions": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report"
+    }
+}
