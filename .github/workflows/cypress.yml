@@ -31,11 +31,11 @@ jobs:
           cp -r cypress/videos public/videos
           cp -r cypress/screenshots public/screenshots
           
-      - name: Merge test reports
-        run: npm run combine:report
+#       - name: Merge test reports
+#         run: npm run combine:report
         
-      - name: Generate HTML report
-        run: npm run generate:report
+#       - name: Generate HTML report
+#         run: npm run generate:report
         
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
