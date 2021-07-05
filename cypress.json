@@ -8,10 +8,8 @@
     "projectId": "2xzpz9",
     "reporter": "mochawesome",
     "reporterOptions": {
+        "overwrite": false,
         "charts": true,
-        "html": true,
-        "json": true,
-        "reportDir": "cypress/reports",
-        "reportFilename": "report"
+        "json": true
     }
 }

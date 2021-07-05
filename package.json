@@ -7,9 +7,11 @@
     "cy:open": "cypress open",
     "cy:run:chrome": "cypress run --browser chrome",
     "cy:run:firefox": "cypress run --browser firefox",
-    "cyLrun:electron": "cypress run --browser electron",
+    "cy:run:electron": "cypress run --browser electron",
     "cy:run-dashboard": "cypress run --record --key f43659ea-86c3-4aff-b6ea-a603fa77c482",
-    "cy:run-cucum": "./node_modules/.bin/cypress-tags run -e TAGS='@ayam'"
+    "test:chrome": "./node_modules/.bin/cypress-tags run -e TAGS='@ayam'",
+    "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
+    "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "keywords": [
     "Cypress",
@@ -23,6 +25,8 @@
     "cypress-cucumber-preprocessor": "^4.1.2",
     "cypress-xpath": "^1.6.2",
     "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.2.0",
+    "mochawesome-report-generator": "^5.2.0",
     "prettier": "^2.3.2"
   },
   "cypress-cucumber-preprocessor": {
