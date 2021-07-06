@@ -14,7 +14,6 @@
     "test:chrome": "./node_modules/.bin/cypress-tags run -e TAGS='@ayam'",
     "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
     "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
-    //run local
     "cleanup": "rm -fr mochawesome-report/",
     "merge_reports": "mochawesome-merge mochawesome-report/*.json > output.json",
     "mochawesome_report": "marge --reportDir mochawesome-report -t Cypress_Test_Report -p Cypress_HMTL_Report -f Cypress_HMTL_Report --timestamp mmddyyyy_HHMMss --charts true output.json",
