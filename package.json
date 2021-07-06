@@ -9,9 +9,15 @@
     "cy:run:firefox": "cypress run --browser firefox",
     "cy:run:electron": "cypress run --browser electron",
     "cy:run-dashboard": "cypress run --record --key f43659ea-86c3-4aff-b6ea-a603fa77c482",
+    "cleannih": "rm -fr --reportDir public --assetsDir public/assets",
     "test:chrome": "./node_modules/.bin/cypress-tags run -e TAGS='@ayam'",
     "combine:report": "mochawesome-merge ./mochawesome-report/*.json -o index.json",
-    "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
+    "generate:report": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html",
+    //run local
+    "cleanup": "rm -fr mochawesome-report/",
+    "merge_reports": "mochawesome-merge mochawesome-report/*.json > output.json",
+    "mochawesome_report": "marge --reportDir mochawesome-report -t Cypress_Test_Report -p Cypress_HMTL_Report -f Cypress_HMTL_Report --timestamp mmddyyyy_HHMMss --charts true output.json",
+    "cy:report": "npm run cleanup && cypress run && npm run merge_reports && npm run mochawesome_report"
   },
   "keywords": [
     "Cypress",
