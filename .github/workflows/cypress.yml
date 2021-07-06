@@ -22,7 +22,7 @@ jobs:
           $(npm bin)/cypress verify
           
       - name: Run Cypress tests
-        run: npm run cleannih
+        run: npm run test:real
         continue-on-error: false
         
       - name: Copy test execution videos and screenshots
