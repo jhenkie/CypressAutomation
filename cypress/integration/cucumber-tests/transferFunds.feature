@@ -1,3 +1,4 @@
+@ayam
 Feature: Check feedback page page
     Background: user login
     Given I login
