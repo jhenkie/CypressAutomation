@@ -14,16 +14,16 @@ jobs:
     container: cypress/browsers:node14.16.0-chrome90-ff88
 
     steps:
+      - name: Run Cypress tests
+        run: npm run test:real
+        continue-on-error: false
+        
       - uses: actions/checkout@v2
       
       - name: Install cypress and verify
         run: |
           npm ci
           $(npm bin)/cypress verify
-          
-      - name: Run Cypress tests
-        run: npm run test:real
-        continue-on-error: false
         
       - name: Copy test execution videos and screenshots
         run: |
