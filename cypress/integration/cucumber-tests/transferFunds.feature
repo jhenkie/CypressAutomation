@@ -1,5 +1,5 @@
 @ayam
-Feature: Check feedback page page
+Feature: Check transfer fund page
     Background: user login
     Given I login
 
